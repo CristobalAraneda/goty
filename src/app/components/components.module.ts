@@ -4,6 +4,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GraficoBarraHorizontalComponent } from './grafico-barra-horizontal/grafico-barra-horizontal.component';
 import { RouterModule } from '@angular/router';
 
+import{ BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   ]
 })
 export class ComponentsModule { }
