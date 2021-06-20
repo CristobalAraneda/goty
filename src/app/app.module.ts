@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { GotyComponent } from './pages/goty/goty.component';
 import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ComponentsModule } from './components/components.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,19 +9,19 @@ export class GraficoBarraHorizontalComponent implements OnDestroy {
 
   result: any[]= [
     {
-      "name": "Juego 1",
+      "name": "The Last of Us Part II",
       "value": 8940000
     },
     {
-      "name": "Juego2",
+      "name": "Hades",
       "value": 5000000
     },
     {
-      "name": "juego3",
+      "name": "Halt-Life: Alyx",
       "value": 7200000
     },
     {
-      "name": "juego4",
+      "name": "Destiny 2",
       "value": 8700000
     }
   ];
