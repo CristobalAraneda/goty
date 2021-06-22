@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
-import { tap } from "rxjs/operators";
+import { catchError, tap } from "rxjs/operators";
 import { environment } from '../../environments/environment';
 import { Game } from '../interfaces/interfaces';
 
@@ -41,6 +41,12 @@ export class GameService {
   VotarGuego(id: string){
 
     return this.http.post(`${ environment.url}goty/${id}`,{})
+    .pipe(
+      catchError( err =>{
+          return of(err.error);
+
+      })
+    )
 
   }
 }
