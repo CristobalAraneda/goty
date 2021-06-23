@@ -1,4 +1,4 @@
-import { Component, OnDestroy} from '@angular/core';
+import { Component, Input, OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-grafico-barra-horizontal',
@@ -7,24 +7,7 @@ import { Component, OnDestroy} from '@angular/core';
 })
 export class GraficoBarraHorizontalComponent implements OnDestroy {
 
-  result: any[]= [
-    {
-      "name": "The Last of Us Part II",
-      "value": 8940000
-    },
-    {
-      "name": "Hades",
-      "value": 5000000
-    },
-    {
-      "name": "Halt-Life: Alyx",
-      "value": 7200000
-    },
-    {
-      "name": "Destiny 2",
-      "value": 8700000
-    }
-  ];
+  @Input() results: any []= [];
   
 
   
@@ -40,23 +23,20 @@ export class GraficoBarraHorizontalComponent implements OnDestroy {
 
   colorScheme = 'nightLights';
 
-  intervalo;
+ // intervalo;
 
   constructor(){
 
-   this.intervalo = setInterval(()=>{
-      console.log('tick');
+   //this.intervalo = setInterval(()=>{
+   //   console.log('tick');
+//
+   //   const newResult = [...this.result];
+//
+ //     for (let i  in newResult ) {
+   //    }
 
-      const newResult = [...this.result];
-
-      for (let i  in newResult ) {
-        newResult[i].value = Math.round( Math.random() * 500)
-        
-      }
-
-      this.result=[...newResult];
-
-    }, 3600);
+   //   this.result=[...newResult];
+// }, 3600);
 
 
   }
@@ -66,7 +46,7 @@ export class GraficoBarraHorizontalComponent implements OnDestroy {
   }
 
   ngOnDestroy(){
-    clearInterval( this.intervalo );
+   //clearInterval( this.intervalo );
     
   }
 
