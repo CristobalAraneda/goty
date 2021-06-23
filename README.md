@@ -19,6 +19,7 @@ Este proyecto es un App de votacion web Basica, que permite realizar votaciones 
 ## configuracion enviroments
 Modificque ruta `src/app/environments ` los archivos enviormonmets.ts para desarrollo y enviormonmets.prod.ts con la configuracion de firebase de su proyecto [guia angularfire](https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md)
 ```
+url:'<url server>'
 firebase: {
     apiKey: '<your-key>',
     authDomain: '<your-project-authdomain>',
